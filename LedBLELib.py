@@ -3,7 +3,7 @@ from bleak import BleakClient
 
 class AuraLEDController:
     """
-    Controlador principal
+    Principal class
     """
     COMMAND_UUID = "0000ffe1-0000-1000-8000-00805f9b34fb"  
     def __init__(self, address: str):
@@ -93,7 +93,7 @@ class AuraLEDController:
             0xef
         ]
         await self.send_command(cmd)
-        print(f"🎨 Color cambiado a (R:{r}, G:{g}, B:{b}).")
+        print(f" Color changed to (R:{r}, G:{g}, B:{b}).")
     
     async def set_effect_speed(self, speed: int):
         """
@@ -111,7 +111,7 @@ class AuraLEDController:
             0xef
         ]
         await self.send_command(cmd)
-        print(f"⚡ Velocidad de efecto ajustada a {speed}.")
+        print(f"Effect speed set to {speed}.")
         
     async def set_mode_grayscale(self):
         """
@@ -127,7 +127,7 @@ class AuraLEDController:
             0xef
         ]
         await self.send_command(cmd)
-        print("🎨 Grayscale mode enabled.")
+        print("Grayscale mode enabled.")
     
     async def set_mode_temperature(self, temperature: int):
         """
@@ -146,7 +146,7 @@ class AuraLEDController:
             0xef
         ]
         await self.send_command(cmd)
-        print(f"🌡️ Temperature mode enabled with value {temperature}.")
+        print(f"Temperature mode enabled with value {temperature}.")
     
     async def set_mode_effect(self, effect: int):
         """
@@ -162,7 +162,7 @@ class AuraLEDController:
             0xef
         ]
         await self.send_command(cmd)
-        print(f"✨ Effect mode enabled with code 0x{effect:02x}.")
+        print(f"Effect mode enabled with code 0x{effect:02x}.")
     
     async def set_mode_dynamic(self, val: int):
         """
