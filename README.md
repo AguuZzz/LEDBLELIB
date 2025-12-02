@@ -16,4 +16,4 @@ pip install -r requirements.txt
 You'll find some examples in the `Examples` folder including:
 
 - `F1.py`: Sync with Formula 1 flags and race winners in real-time.  
-
+- `Minecraft.py`: Sync when you take damage in game
