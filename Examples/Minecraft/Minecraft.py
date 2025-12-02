@@ -2,8 +2,9 @@ import asyncio
 import time
 import re
 from LedBLELib import * 
+import os
 
-LOG_PATH = "/home/agus/.minecraft/logs/latest.log"
+LOG_PATH = os.path.join(os.path.expanduser("~"), ".minecraft", "logs", "latest.log")
 
 LED_MAC_ADDRESS = "78:9C:E7:0F:E3:79"
 led = AuraLEDController(LED_MAC_ADDRESS)
